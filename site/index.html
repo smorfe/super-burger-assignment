@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="dist/css/main.css">
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="dist/js/main.js"></script>
+</head>
+
+<body>
+    <div data-role="page" id="main-page" class="site-main">
+        <!-- Task 1 : Make the red color spread across the header. Make the full header RED.
+            You can move your css to an external file as css or scss.
+        -->
+        <div data-role="header" data-position="fixed">
+            <div class="site-header">
+                <div class="logo">
+                    <img src="./content/assets/logo/super-burger-logo.png" />
+                </div>
+            </div>
+
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <div class="products-header">
+                <h1>Menu</h1>
+            </div>
+            <div id="all-products">
+                <!-- All products are added here -->
+            </div>
+
+        </div>
+
+        <div data-role="footer" data-position="fixed" id="site-footer">
+            <div id="added-product-popup"></div>
+            <div data-role="popup" id="purchase-popup" data-transition="pop" class="ui-content" data-theme="a">
+                <p id="notification"></p>
+            </div>
+            <a href="#cart" data-transition="slideup" id="view-cart-button"
+                class="ui-btn ui-nodisc-icon ui-alt-icon ui-icon-shop ui-btn-icon ui-btn-icon-notext view-cart-button">View
+                Cart<span id="selected-items-counter"></span></a>
+
+            <div class="order-info ui-grid-a">
+                <div class="ui-block-a">
+                    <div class="ui-bar"><span id="total-items"></span></div>
+                </div>
+                <div class="ui-block-b">
+                    <div class="ui-bar"><span id="total-price"></span></div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div data-role="dialog" data-dialog="true" data-corners="false" data-close-btn="none" data-url="cart"
+        class="view-cart-wrapper" id="cart">
+        <div class="cart-header" data-role="header" data-position="fixed">
+            <a href="#" id="close-cart-button" data-rel="back"
+                class="ui-btn ui-nodisc-icon ui-alt-icon ui-icon-carat-l ui-btn-icon ui-btn-icon-notext">Close Cart<span
+                    id="selected-items-counter"></span></a>
+            <h3 id="selected-products-header">Your Order</h3>
+        </div>
+        <ul data-role="listview" id="selected-products" data-inset="false">
+            <!-- Selected products are added here -->
+        </ul>
+
+        <div class="ui-block-b footer-price-button">
+            <h3><span id="payment_amount"></span></h3>
+            <button id="place-order-button">Place Order</button>
+        </div>
+    </div>
+</body>
+
+</html>
