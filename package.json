@@ -1,0 +1,21 @@
+{
+	"name": "@smorfe/super-burger-assignment",
+	"version": "1.0.0",
+	"description": "For assignment purposes only.",
+	"main": "gulpfile.js",
+	"dependencies": {
+		"gulp": "^4.0.2",
+		"gulp-sass": "^4.1.0"
+	},
+	"devDependencies": {
+		"browser-sync": "^2.26.14",
+		"gulp-uglify": "^3.0.2"
+	},
+	"scripts": {},
+	"author": "Shiela Morfe",
+	"license": "ISC",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/smorfe/super-burger-assignment"
+	}
+}
