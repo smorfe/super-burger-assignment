@@ -22,10 +22,6 @@ $(document).ready(function () {
 	disableNonApplePayButton(true);
 });
 
-$(document).on("pageinit", "#cart", function (event) {
-	repaintSelectedList();
-});
-
 function disableNonApplePayButton(disable) {
 	$("#place-order-button").prop("disabled", disable);
 }
@@ -211,7 +207,7 @@ function repaintSelectedList() {
 
 	$("#selected-products").empty();
 	$("#selected-products").append(listSelectedItems.join(""));
-	$("#selected-products").listview("refresh");
+	$("#selected-products").listview().listview("refresh");
 
 	// if (listSelectedItems.length == 0) {
 	// 	displaySelectedItemsDiv(false);
